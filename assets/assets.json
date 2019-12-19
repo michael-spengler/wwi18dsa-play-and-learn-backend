@@ -1,0 +1,22 @@
+[
+    {
+        "id": "1xy",
+        "type": "JSON",
+        "content": [
+            {
+                "weather": "sunny"
+            }
+        ]
+    },
+    {
+        "id": "2xy",
+        "type": "file",
+        "content": "example.html"
+    },
+    {
+        "id": "logo",
+        "type": "file",
+        "content": "play-and-learn-logo.png"
+    }
+
+]

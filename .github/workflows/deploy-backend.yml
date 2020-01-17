@@ -11,5 +11,4 @@ jobs:
     - uses: actions/checkout@v1
     - name: git pull, build and deploy
       run: |
-        echo geil,
-        sshpass -p ${{ secrets.pw }} ssh root@95.216.160.112 -o StrictHostKeyChecking=no < ./deploy.bash
+        sshpass -p ${{ secrets.pw }} ssh root@95.216.160.112 -o StrictHostKeyChecking=no < ./deploy-backend.bash

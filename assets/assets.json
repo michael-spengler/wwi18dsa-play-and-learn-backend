@@ -17,6 +17,15 @@
         "id": "logo",
         "type": "file",
         "content": "play-and-learn-logo.png"
+    },
+    {
+        "id": "f175b15",
+        "type": "JSON",
+        "content": [
+            {
+                "question": "wer ist schön?",
+                "answer": "santhos"
+            }
+        ]
     }
-
 ]

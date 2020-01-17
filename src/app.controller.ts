@@ -4,6 +4,7 @@ import * as path from 'path';
 
 @Controller()
 export class AppController {
+  private count = 0;
   constructor(private appService: AppService) {}
 
   @Get()
@@ -32,6 +33,8 @@ export class AppController {
 
   @Post('/addAsset')
   addAsset(@Body() body: any, @Res() response: any): void {
+    // tslint:disable-next-line: no-console
+    console.log('Jemand hat einen Post Request gemacht.');
     response.send(this.appService.addAsset(body));
   }
 

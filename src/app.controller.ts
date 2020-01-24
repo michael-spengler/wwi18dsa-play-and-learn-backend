@@ -9,9 +9,8 @@ export class AppController {
 
   @Get()
   getHello(@Res() response: any): void {
-    console.log(__dirname);
+
     const pathToIndexHTML = path.join(__dirname, `../assets/docs/index.html`);
-    console.log(pathToIndexHTML);
 
     response.sendFile(pathToIndexHTML);
   }

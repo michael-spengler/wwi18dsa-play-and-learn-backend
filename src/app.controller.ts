@@ -14,6 +14,11 @@ export class AppController {
 
     response.sendFile(pathToIndexHTML);
   }
+  @Get('getSomething')
+  getHello(@Res() response: any): void {
+      response.send('something')
+  }
+
 
   @Get('/getAsset/:id')
   getAsset(@Param('id') id: string, @Res() response: any): void {

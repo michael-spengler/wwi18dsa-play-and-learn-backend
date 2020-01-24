@@ -11,13 +11,13 @@ export class AppController {
   getHello(@Res() response: any): void {
 
     const pathToIndexHTML = path.join(__dirname, `../assets/docs/index.html`);
-
+    response.send('hello from Miriam, Hannah und Manuel');
     response.sendFile(pathToIndexHTML);
   }
 
   @Get('unserEndpoint')
   unserEndpoint(@Res() response: any): void {
-    response.send('das ist unser endpoint')
+    response.send('das ist unser endpoint');
   }
 
   @Get('/getAsset/:id')

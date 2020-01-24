@@ -10,10 +10,18 @@ export class AppController {
   @Get()
   getHello(@Res() response: any): void {
 
-    const pathToIndexHTML = path.join(__dirname, `../assets/docs/index.html`);
+    const pathToIndexHTML = path.join(__dirname, `../assets/index.html`);
 
     response.sendFile(pathToIndexHTML);
   }
+
+  @Get('getSomething')
+  getSomething(@Res() response: any): void {
+    response.send('Hallo Michael, es hat funktioniert!!');
+  }
+
+
+  
 
   @Get('/getAsset/:id')
   getAsset(@Param('id') id: string, @Res() response: any): void {

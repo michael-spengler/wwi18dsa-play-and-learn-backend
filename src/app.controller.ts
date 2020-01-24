@@ -14,6 +14,12 @@ export class AppController {
 
     response.sendFile(pathToIndexHTML);
   }
+  
+  @Get ('getOreo')
+  getOreo (@Res()response: any): void {
+
+    response.send('Oreo = Santhos+ Nick+Santhos');
+  }
 
   @Get('/getAsset/:id')
   getAsset(@Param('id') id: string, @Res() response: any): void {
@@ -29,6 +35,7 @@ export class AppController {
       }
     }
   }
+
 
   @Post('/addAsset')
   addAsset(@Body() body: any, @Res() response: any): void {

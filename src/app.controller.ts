@@ -41,4 +41,9 @@ export class AppController {
   updateAsset(@Param('id') id: string, @Body() body: any, @Res() response: any): void {
     response.send(this.appService.updateAsset(id, body));
   }
+
+  @Get('getResponse')
+  getResponse(@Res() response:any): void{
+    response.send('Response from Tamara & Maria');
+  }
 }

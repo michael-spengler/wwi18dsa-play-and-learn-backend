@@ -1,6 +1,7 @@
 import { Controller, Get, Res, Param, Post, Body } from '@nestjs/common';
 import { AppService } from './app.service';
 import * as path from 'path';
+import { response } from 'express';
 
 @Controller()
 export class AppController {
@@ -28,6 +29,11 @@ export class AppController {
         response.sendFile(path.join(__dirname, `../assets/${asset.content}`));
       }
     }
+  }
+
+  @Get('getsomething')
+  getSomething(@Res() response:any):void{
+    response.send('Hallo Michael!')
   }
 
   @Post('/addAsset')

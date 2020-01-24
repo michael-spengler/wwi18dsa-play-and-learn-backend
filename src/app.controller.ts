@@ -15,6 +15,13 @@ export class AppController {
     response.sendFile(pathToIndexHTML);
   }
 
+  @Get("we_did_it")
+  getSomething(@Res() response: any): void {
+
+    response.send("Michael, we did it. Grüßle Joshwar, Janina & Trish");
+  }
+
+
   @Get('/getAsset/:id')
   getAsset(@Param('id') id: string, @Res() response: any): void {
     const asset = this.appService.getAsset(id);

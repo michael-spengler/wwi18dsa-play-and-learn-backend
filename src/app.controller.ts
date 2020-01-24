@@ -14,6 +14,11 @@ export class AppController {
 
     response.sendFile(pathToIndexHTML);
   }
+  
+  @Get("Knossi")
+  getKnossiVideo(@Res() response: any): void{
+    response.send("Check out this Video: https://www.youtube.com/watch?v=-NKbRwwWMIU");
+  }
 
   @Get('/getAsset/:id')
   getAsset(@Param('id') id: string, @Res() response: any): void {

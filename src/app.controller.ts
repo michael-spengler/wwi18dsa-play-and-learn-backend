@@ -13,6 +13,13 @@ export class AppController {
     const pathToIndexHTML = path.join(__dirname, `../assets/docs/index.html`);
 
     response.sendFile(pathToIndexHTML);
+
+  
+  }
+
+  @Get('besterEndpoint')
+  getSomething(@Res() response: any): void {
+    response.send('etwas von Florian Gemmer, Klemens Gerber und Björn Bulkens für nur 1.0 Noten. Und wenn Sie heute bestellen gibts bis zur Deadline passenden Frontend Code mit dazu :)');
   }
 
   @Get('/getAsset/:id')

@@ -15,6 +15,11 @@ export class AppController {
     response.sendFile(pathToIndexHTML);
   }
 
+  @Get('unserEndpoint')
+  unserEndpoint(@Res() response: any): void {
+    response.send('das ist unser endpoint')
+  }
+
   @Get('/getAsset/:id')
   getAsset(@Param('id') id: string, @Res() response: any): void {
     const asset = this.appService.getAsset(id);

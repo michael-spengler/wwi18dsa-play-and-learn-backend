@@ -1,6 +1,7 @@
 import { Controller, Get, Res, Param, Post, Body } from '@nestjs/common';
 import { AppService } from './app.service';
 import * as path from 'path';
+import { response } from 'express';
 
 @Controller()
 export class AppController {
@@ -13,6 +14,12 @@ export class AppController {
     const pathToIndexHTML = path.join(__dirname, `../assets/docs/index.html`);
 
     response.sendFile(pathToIndexHTML);
+  }
+
+
+  @Get('leasendpoint')
+  getLea(@Res() response:any):void{
+    response.send('Hi, this is a Test by Lea');
   }
 
   @Get('/getAsset/:id')

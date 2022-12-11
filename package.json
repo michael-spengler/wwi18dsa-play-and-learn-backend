@@ -24,7 +24,7 @@
     "@angular/core": "^8.2.14",
     "@nestjs/common": "^6.0.0",
     "@nestjs/core": "^6.0.0",
-    "@nestjs/platform-express": "^6.0.0",
+    "@nestjs/platform-express": "^9.2.1",
     "configuration-reader": "^1.0.6",
     "cors": "^2.8.5",
     "fs-sync": "^1.0.6",
